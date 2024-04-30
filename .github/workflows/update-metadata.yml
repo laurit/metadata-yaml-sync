@@ -9,7 +9,9 @@ on:
 jobs:
   auto-update-versions:
     name: Auto-update metadata
-    runs-on: ubuntu-20.04
+    permissions:
+      contents: write  # for Git to git push
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
