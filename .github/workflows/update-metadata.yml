@@ -6,11 +6,13 @@ on:
     # hourly at minute 10
     - cron: 10 * * * *
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   auto-update-versions:
     name: Auto-update metadata
-    permissions:
-      contents: write  # for Git to git push
     runs-on: ubuntu-latest
 
     steps:
